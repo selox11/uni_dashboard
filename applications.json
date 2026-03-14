@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "university": "Columbia University",
+    "program": "Computer Science",
+    "country": "USA",
+    "deadline": "2026-01-05",
+    "status": "Pending",
+    "notes": "Prepare personal statement."
+  },
+  {
+    "id": 2,
+    "university": "Harvard University",
+    "program": "Computer Science",
+    "country": "USA",
+    "deadline": "2026-01-10",
+    "status": "Applied",
+    "notes": "Application submitted through Common App."
+  },
+  {
+    "id": 3,
+    "university": "Yale University",
+    "program": "Data Science",
+    "country": "USA",
+    "deadline": "2026-01-08",
+    "status": "Pending",
+    "notes": "Upload recommendation letters."
+  },
+  {
+    "id": 4,
+    "university": "Princeton University",
+    "program": "Artificial Intelligence",
+    "country": "USA",
+    "deadline": "2026-01-12",
+    "status": "Applied",
+    "notes": "Waiting for interview invitation."
+  },
+  {
+    "id": 5,
+    "university": "Cornell University",
+    "program": "Software Engineering",
+    "country": "USA",
+    "deadline": "2026-01-15",
+    "status": "Accepted",
+    "notes": "Offer received."
+  }
+]

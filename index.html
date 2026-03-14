@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>University Application Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Dashboard</p>
+        <h1>University Application Tracker</h1>
+        <p class="subtitle">
+          Track deadlines, manage application statuses, and add universities in one place.
+        </p>
+      </div>
+      <button id="resetBtn" class="ghost-btn" type="button">Reset to sample data</button>
+    </header>
+
+    <section class="stats" aria-label="Application statistics">
+      <article class="stat-card">
+        <span>Total</span>
+        <strong id="totalCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>Pending</span>
+        <strong id="pendingCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>Applied</span>
+        <strong id="appliedCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>Accepted</span>
+        <strong id="acceptedCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>Rejected</span>
+        <strong id="rejectedCount">0</strong>
+      </article>
+    </section>
+
+    <section class="panel controls-panel">
+      <div class="toolbar">
+        <div class="filters" aria-label="Filter applications by status">
+          <button class="filter-btn active" data-filter="All" type="button">All</button>
+          <button class="filter-btn" data-filter="Pending" type="button">Pending</button>
+          <button class="filter-btn" data-filter="Applied" type="button">Applied</button>
+          <button class="filter-btn" data-filter="Accepted" type="button">Accepted</button>
+          <button class="filter-btn" data-filter="Rejected" type="button">Rejected</button>
+        </div>
+
+        <label class="search-wrap">
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Search university, program, country..."
+          />
+        </label>
+      </div>
+    </section>
+
+    <section class="grid-layout">
+      <section class="panel form-panel">
+        <h2>Add new application</h2>
+        <form id="applicationForm" class="application-form">
+          <label>
+            University
+            <input type="text" id="university" required />
+          </label>
+
+          <label>
+            Program
+            <input type="text" id="program" required />
+          </label>
+
+          <label>
+            Country
+            <input type="text" id="country" required />
+          </label>
+
+          <label>
+            Deadline
+            <input type="date" id="deadline" required />
+          </label>
+
+          <label>
+            Status
+            <select id="status">
+              <option value="Pending">Pending</option>
+              <option value="Applied">Applied</option>
+              <option value="Accepted">Accepted</option>
+              <option value="Rejected">Rejected</option>
+            </select>
+          </label>
+
+          <label class="full-width">
+            Notes
+            <textarea id="notes" rows="3" placeholder="Optional notes"></textarea>
+          </label>
+
+          <button class="primary-btn full-width" type="submit">Add application</button>
+        </form>
+      </section>
+
+      <aside class="panel side-panel">
+        <h2>Progress overview</h2>
+
+        <div class="progress-box">
+          <div class="progress-label-row">
+            <span>Completion</span>
+            <strong id="completionText">0%</strong>
+          </div>
+          <div class="progress-bar">
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+        </div>
+
+        <h3>Upcoming deadlines</h3>
+        <div id="deadlineList" class="deadline-list"></div>
+      </aside>
+    </section>
+
+    <section class="panel">
+      <div class="list-header">
+        <h2>Your applications</h2>
+        <p id="statusMessage">Loading data...</p>
+      </div>
+
+      <section
+        id="applicationsGrid"
+        class="applications-grid"
+        aria-label="Applications list"
+      ></section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
